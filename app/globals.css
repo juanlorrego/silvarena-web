@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+/* ─── Silvarena Design System ─────────────────────────────────────────────── */
+
+@theme inline {
+  /* Paleta de marca */
+  --color-verde-noche: #1F382E;
+  --color-crema:       #F3EEE3;
+  --color-helecho:     #8FA67A;
+  --color-madera:      #7B5C3A;
+  --color-musgo:       #4A5E3A;
+
+  /* Aliases semánticos */
+  --color-background:  var(--color-verde-noche);
+  --color-foreground:  var(--color-crema);
+  --color-accent:      var(--color-helecho);
+
+  /* Fuentes */
+  --font-garamond:   var(--font-eb-garamond);
+  --font-cormorant:  var(--font-cormorant-garamond);
+  --font-sans:       var(--font-montserrat);
+}
+
+/* ─── Tokens base ─────────────────────────────────────────────────────────── */
+
+:root {
+  --verde-noche: #1F382E;
+  --crema:       #F3EEE3;
+  --helecho:     #8FA67A;
+  --madera:      #7B5C3A;
+  --musgo:       #4A5E3A;
+}
+
+/* ─── Reset & base ────────────────────────────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--verde-noche);
+  color: var(--crema);
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Tipografía editorial ────────────────────────────────────────────────── */
+
+.font-garamond  { font-family: var(--font-eb-garamond), 'EB Garamond', Georgia, serif; }
+.font-cormorant { font-family: var(--font-cormorant-garamond), 'Cormorant Garamond', Georgia, serif; }
+.font-montserrat { font-family: var(--font-montserrat), 'Montserrat', sans-serif; }
+
+/* Regla de marca: nunca bold */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+/* ─── Hairlines de separación ─────────────────────────────────────────────── */
+
+.hairline {
+  border: none;
+  border-top: 0.5px solid var(--crema);
+  opacity: 0.35;
+}
+
+.hairline-helecho {
+  border: none;
+  border-top: 0.5px solid var(--helecho);
+}
+
+/* ─── Utilidades de scroll reveal ────────────────────────────────────────── */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Animaciones ─────────────────────────────────────────────────────────── */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+/* ─── Scrollbar ───────────────────────────────────────────────────────────── */
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--verde-noche); }
+::-webkit-scrollbar-thumb { background: var(--musgo); border-radius: 3px; }

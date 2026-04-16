@@ -1,0 +1,319 @@
+export type Lang = 'es' | 'en'
+
+export const translations = {
+  es: {
+    nav: {
+      cabanas:     'Cabañas',
+      experiencia: 'Experiencia',
+      galeria:     'Galería',
+      contacto:    'Contacto',
+      reservar:    'Verificar disponibilidad',
+      navegacion:  'Navegación',
+    },
+    messages: {
+      checkAvailability: 'Hola, me gustaría verificar disponibilidad en Silvarena',
+      bookReservation:   'Hola, me gustaría reservar en Silvarena. ¿Cuál es la disponibilidad?',
+      moreInfo:          'Hola, me gustaría obtener más información sobre Silvarena',
+    },
+    ui: {
+      backHome:    '← Volver al inicio',
+      cabanas:     'Las cabañas',
+      experiencia: 'La experiencia',
+      reservas:    'Reservas',
+      includes:    'Incluye',
+      distances:   'Distancias',
+      airport:     'Aeropuerto',
+      openMaps:    'Abrir en Google Maps →',
+      reseñas:     'Reseñas',
+      location:    'Ubicación',
+    },
+    hero: {
+      supertitle: 'GLAMPING · LA CEJA · ANTIOQUIA',
+      tagline:    'Aquí, el mundo desaparece.',
+      rating:     'huéspedes satisfechos',
+      cta:        'Verificar disponibilidad',
+      ctaSub:     'Mejor precio al reservar directo',
+    },
+    propuesta: {
+      title: 'Naturaleza viva, silencio profundo.',
+      p1: 'El Oriente Antioqueño tiene sus propios ritmos. Aquí el silencio no es ausencia, es presencia. Silvarena nació para quienes necesitan recordar cómo suena eso.',
+      p2: 'Cuatro cabañas de madera entre el bosque de montaña. Jardines que florecen todo el año. Jacuzzis exteriores con el valle como único horizonte.',
+      p3: 'Aquí no hay itinerario. Solo el tiempo que tú decides darle.',
+      feature1: 'Cabañas artesanales',
+      feature1Sub: 'Madera viva, detalles que importan',
+      feature2: 'Jacuzzis privados',
+      feature2Sub: 'Con vista directa al valle',
+      feature3: 'Jardines en flor',
+      feature3Sub: 'Todo el año, sin excepción',
+    },
+    cabanas: {
+      title: 'Cuatro expresiones del mismo lugar.',
+      subtitle: 'Las cabañas se asignan según disponibilidad. Cada una ofrece los mismos espacios, las mismas vistas, el mismo silencio.',
+      note: '¿Tienes preferencia? Puedes indicarla al reservar y haremos lo posible.',
+      amenidades: ['Jacuzzi privado exterior', 'Terraza con vista al valle', 'Cama doble', 'Baño completo', 'BBQ privado', 'TV y frigobar'],
+      cabanas: [
+        { nombre: 'Ciprés',   frase: 'Erguida y silenciosa. La cabaña que mira el valle sin parpadear.' },
+        { nombre: 'Sequoia',  frase: 'Profunda como el bosque que la inspira. Para los que llegan a quedarse de verdad.' },
+        { nombre: 'Líbano',   frase: 'De donde vienen los cedros más antiguos. Aquí el tiempo tiene otra medida.' },
+        { nombre: 'Tannurín', frase: 'Un nombre que viene de lejos, un lugar que se siente como siempre estuvo aquí.' },
+      ],
+    },
+    experiencia: {
+      title: 'El entorno es el producto.',
+      sections: [
+        { titulo: 'Los jardines', texto: 'Flores que cambian de color con las estaciones pero nunca desaparecen. Los jardines de Silvarena crecen con el tiempo, no contra él.' },
+        { titulo: 'La vista',    texto: 'El valle del Oriente Antioqueño desde tu terraza. Sin filtros. Sin intermediarios. Solo montaña, niebla y silencio.' },
+        { titulo: 'El guardián', texto: 'Nuestro pavo real no fue planificado. Llegó un día y decidió quedarse. Desde entonces, es el guardián silencioso de los jardines.' },
+        { titulo: 'El agua',     texto: 'El jacuzzi listo cuando tú llegues. La temperatura, los grados exactos. Afuera, la montaña. Adentro, calma.' },
+      ],
+    },
+    testimonios: {
+      title: 'Lo que dicen quienes ya llegaron.',
+      rating: '4.9 de 5 estrellas',
+      platform: 'Basado en reseñas de Google y Airbnb',
+    },
+    reservas: {
+      title: '¿Listo para desaparecer?',
+      subtitle: 'Las reservas se gestionan por WhatsApp. Confirmación inmediata. Mejor precio garantizado al reservar directo.',
+      cta:    'Reservar por WhatsApp',
+      badge:  'Mejor precio directo',
+      note:   'Sin comisiones de intermediarios.',
+    },
+    ubicacion: {
+      title: 'Cómo llegar.',
+      subtitle: 'San José, municipio de La Ceja, Oriente Antioqueño, Colombia.',
+      desde:  'A 55 minutos del aeropuerto José María Córdova (Rionegro)',
+      gps:    'Ingresa "Silvarena Glamping" en Google Maps',
+      cerca:  ['La Ceja (8 min)', 'El Retiro (15 min)', 'Rionegro (45 min)', 'Medellín (1h 15min)'],
+    },
+    footer: {
+      tagline: 'Aquí, el mundo desaparece.',
+      links: {
+        cabanas:  'Cabañas',
+        galeria:  'Galería',
+        faq:      'Preguntas frecuentes',
+        politicas:'Políticas',
+        contacto: 'Contacto',
+        documentos: 'Documentos',
+      },
+      contacto: {
+        whatsapp: 'WhatsApp',
+        email:    'hola@silvarena.com',
+      },
+      legal: '© 2026 Silvarena Glamping · San José, La Ceja, Antioquia · Todos los derechos reservados',
+    },
+    galeria: {
+      title: 'Galería',
+      subtitle: 'Las imágenes que no caben en una sola sección.',
+    },
+    faq: {
+      title: 'Preguntas frecuentes',
+      items: [
+        { q: '¿Cuántas personas caben por cabaña?', a: 'Cada cabaña es ideal para 2 personas. Podemos acomodar hasta 3 con comunicación previa.' },
+        { q: '¿Se permiten mascotas?', a: 'No se permiten mascotas en las cabañas para proteger el entorno natural y la experiencia de todos los huéspedes.' },
+        { q: '¿Cuál es la política de cancelación?', a: 'Cancelaciones con más de 7 días de anticipación tienen reembolso del 80%. Con menos de 7 días, no hay reembolso. Consulta nuestras políticas completas para más detalles.' },
+        { q: '¿El desayuno está incluido?', a: 'No incluimos desayuno en el valor de la cabaña. Contamos con cocina equipada en cada cabaña para que prepares lo que desees.' },
+        { q: '¿A qué hora es el check-in y check-out?', a: 'Check-in a partir de las 3:00 PM. Check-out hasta las 12:00 PM. Llegadas anticipadas o salidas tardías según disponibilidad.' },
+        { q: '¿Hay WiFi?', a: 'Sí, contamos con WiFi en todas las cabañas. Aunque viniste a desconectarte, lo dejamos disponible para emergencias.' },
+        { q: '¿Cómo funciona el pago?', a: 'Las reservas se gestionan por WhatsApp. Aceptamos transferencias bancarias y pagos digitales. La reserva se confirma con el pago completo.' },
+        { q: '¿Hay restaurante o servicio de comidas?', a: 'No contamos con restaurante propio. Cada cabaña tiene cocina equipada y BBQ. La tienda más cercana está a 8 minutos en La Ceja.' },
+      ],
+    },
+    contacto: {
+      title: 'Contacto',
+      subtitle: 'La forma más rápida de hablar con nosotros es WhatsApp.',
+      whatsappLabel: 'Escríbenos por WhatsApp',
+      emailLabel:    'O por correo electrónico',
+      email:         'hola@silvarena.com',
+      formTitle:     'También puedes dejarnos un mensaje',
+      formNombre:    'Nombre',
+      formEmail:     'Correo electrónico',
+      formMensaje:   'Mensaje',
+      formEnviar:    'Enviar mensaje',
+    },
+    tra: {
+      title: 'Tarjeta de Registro de Alojamiento',
+      subtitle: 'La ley colombiana exige el registro de todos los huéspedes antes del check-in.',
+      noReserva: 'Número de reserva',
+      nombre:    'Nombre completo',
+      tipoDoc:   'Tipo de documento',
+      numDoc:    'Número de documento',
+      nacionalidad: 'Nacionalidad',
+      fechaNac:  'Fecha de nacimiento',
+      procedencia: 'Ciudad de procedencia',
+      email:     'Correo electrónico',
+      telefono:  'Teléfono',
+      enviar:    'Registrar',
+      tipos: ['Cédula de Ciudadanía', 'Cédula de Extranjería', 'Pasaporte', 'PPT'],
+    },
+    documentos: {
+      title: 'Documentos',
+      subtitle: 'Documentos legales de Silvarena Glamping.',
+    },
+  },
+
+  en: {
+    nav: {
+      cabanas:     'Cabins',
+      experiencia: 'Experience',
+      galeria:     'Gallery',
+      contacto:    'Contact',
+      reservar:    'Check availability',
+      navegacion:  'Navigation',
+    },
+    messages: {
+      checkAvailability: 'Hello, I would like to check availability at Silvarena',
+      bookReservation:   'Hello, I would like to make a reservation at Silvarena. What is the availability?',
+      moreInfo:          'Hello, I would like more information about Silvarena',
+    },
+    ui: {
+      backHome:    '← Back to home',
+      cabanas:     'The cabins',
+      experiencia: 'The experience',
+      reservas:    'Reservations',
+      includes:    'Includes',
+      distances:   'Distances',
+      airport:     'Airport',
+      openMaps:    'Open in Google Maps →',
+      reseñas:     'Reviews',
+      location:    'Location',
+    },
+    hero: {
+      supertitle: 'GLAMPING · LA CEJA · ANTIOQUIA',
+      tagline:    'Here, the world disappears.',
+      rating:     'satisfied guests',
+      cta:        'Check availability',
+      ctaSub:     'Best price when booking direct',
+    },
+    propuesta: {
+      title: 'Living nature, deep silence.',
+      p1: 'The Antioquian East has its own rhythms. Here silence is not absence — it is presence. Silvarena was born for those who need to remember what that sounds like.',
+      p2: 'Four wooden cabins nestled in mountain forest. Gardens that bloom year-round. Outdoor hot tubs with the valley as the only horizon.',
+      p3: 'There is no itinerary here. Only the time you choose to give it.',
+      feature1: 'Artisan cabins',
+      feature1Sub: 'Living wood, details that matter',
+      feature2: 'Private hot tubs',
+      feature2Sub: 'Overlooking the valley',
+      feature3: 'Gardens in bloom',
+      feature3Sub: 'Year-round, without exception',
+    },
+    cabanas: {
+      title: 'Four expressions of the same place.',
+      subtitle: 'Cabins are assigned based on availability. Each offers the same spaces, the same views, the same silence.',
+      note: 'Have a preference? You can indicate it when booking and we\'ll do our best.',
+      amenidades: ['Private outdoor hot tub', 'Terrace with valley view', 'Double bed', 'Full bathroom', 'Private BBQ', 'TV and minibar'],
+      cabanas: [
+        { nombre: 'Ciprés',   frase: 'Upright and silent. The cabin that watches the valley without blinking.' },
+        { nombre: 'Sequoia',  frase: 'Deep as the forest that inspires it. For those who arrive to truly stay.' },
+        { nombre: 'Líbano',   frase: 'Where the oldest cedars come from. Here, time has another measure.' },
+        { nombre: 'Tannurín', frase: 'A name from far away, a place that feels like it was always here.' },
+      ],
+    },
+    experiencia: {
+      title: 'The surroundings are the product.',
+      sections: [
+        { titulo: 'The gardens',  texto: 'Flowers that change color with the seasons but never disappear. Silvarena\'s gardens grow with time, not against it.' },
+        { titulo: 'The view',     texto: 'The Antioquian East valley from your terrace. No filters. No intermediaries. Just mountain, mist, and silence.' },
+        { titulo: 'The guardian', texto: 'Our peacock was not planned. He arrived one day and decided to stay. Since then, he has been the silent guardian of the gardens.' },
+        { titulo: 'The water',    texto: 'The hot tub ready when you arrive. The temperature, the exact degrees. Outside, the mountain. Inside, calm.' },
+      ],
+    },
+    testimonios: {
+      title: 'What those who arrived say.',
+      rating: '4.9 out of 5 stars',
+      platform: 'Based on Google and Airbnb reviews',
+    },
+    reservas: {
+      title: 'Ready to disappear?',
+      subtitle: 'Reservations are managed via WhatsApp. Immediate confirmation. Best price guaranteed when booking direct.',
+      cta:    'Book via WhatsApp',
+      badge:  'Best direct price',
+      note:   'No intermediary commissions.',
+    },
+    ubicacion: {
+      title: 'How to get here.',
+      subtitle: 'San José, municipality of La Ceja, Antioquian East, Colombia.',
+      desde:  '55 minutes from José María Córdova Airport (Rionegro)',
+      gps:    'Search "Silvarena Glamping" on Google Maps',
+      cerca:  ['La Ceja (8 min)', 'El Retiro (15 min)', 'Rionegro (45 min)', 'Medellín (1h 15min)'],
+    },
+    footer: {
+      tagline: 'Here, the world disappears.',
+      links: {
+        cabanas:  'Cabins',
+        galeria:  'Gallery',
+        faq:      'FAQ',
+        politicas:'Policies',
+        contacto: 'Contact',
+        documentos: 'Documents',
+      },
+      contacto: {
+        whatsapp: 'WhatsApp',
+        email:    'hola@silvarena.com',
+      },
+      legal: '© 2026 Silvarena Glamping · San José, La Ceja, Antioquia · All rights reserved',
+    },
+    galeria: {
+      title: 'Gallery',
+      subtitle: 'The images that don\'t fit in a single section.',
+    },
+    faq: {
+      title: 'Frequently asked questions',
+      items: [
+        { q: 'How many people fit per cabin?', a: 'Each cabin is ideal for 2 people. We can accommodate up to 3 with prior communication.' },
+        { q: 'Are pets allowed?', a: 'Pets are not allowed in the cabins to protect the natural environment and the experience of all guests.' },
+        { q: 'What is the cancellation policy?', a: 'Cancellations more than 7 days in advance receive an 80% refund. Less than 7 days, no refund. Check our full policies for details.' },
+        { q: 'Is breakfast included?', a: 'Breakfast is not included in the cabin price. Each cabin has a fully equipped kitchen for you to prepare whatever you wish.' },
+        { q: 'What are check-in and check-out times?', a: 'Check-in from 3:00 PM. Check-out by 12:00 PM. Early arrivals or late departures subject to availability.' },
+        { q: 'Is there WiFi?', a: 'Yes, WiFi is available in all cabins. Though you came to disconnect, we keep it available for emergencies.' },
+        { q: 'How does payment work?', a: 'Reservations are managed via WhatsApp. We accept bank transfers and digital payments. The booking is confirmed with full payment.' },
+        { q: 'Is there a restaurant?', a: 'We do not have our own restaurant. Each cabin has an equipped kitchen and BBQ. The nearest store is 8 minutes away in La Ceja.' },
+      ],
+    },
+    contacto: {
+      title: 'Contact',
+      subtitle: 'The fastest way to reach us is WhatsApp.',
+      whatsappLabel: 'Write to us on WhatsApp',
+      emailLabel:    'Or by email',
+      email:         'hola@silvarena.com',
+      formTitle:     'You can also leave us a message',
+      formNombre:    'Name',
+      formEmail:     'Email',
+      formMensaje:   'Message',
+      formEnviar:    'Send message',
+    },
+    tra: {
+      title: 'Guest Registration Card',
+      subtitle: 'Colombian law requires the registration of all guests before check-in.',
+      noReserva: 'Reservation number',
+      nombre:    'Full name',
+      tipoDoc:   'Document type',
+      numDoc:    'Document number',
+      nacionalidad: 'Nationality',
+      fechaNac:  'Date of birth',
+      procedencia: 'City of origin',
+      email:     'Email',
+      telefono:  'Phone',
+      enviar:    'Register',
+      tipos: ['Cédula de Ciudadanía', 'Foreign ID', 'Passport', 'PPT'],
+    },
+    documentos: {
+      title: 'Documents',
+      subtitle: 'Legal documents of Silvarena Glamping.',
+    },
+  },
+} as const
+
+export type Translations = typeof translations['es']
+
+export function t(lang: Lang): Translations {
+  return translations[lang] as unknown as Translations
+}
+
+export const WHATSAPP_NUMBER = '573332702366'
+export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`
+export function whatsappUrl(message?: string): string {
+  const base = `https://wa.me/${WHATSAPP_NUMBER}`
+  if (!message) return base
+  return `${base}?text=${encodeURIComponent(message)}`
+}
