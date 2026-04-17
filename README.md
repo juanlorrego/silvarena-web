@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Silvarena Glamping — Sitio Web
 
-## Getting Started
+Sitio web oficial de [Silvarena Glamping](https://silvarena.co), un destino de glamping de lujo en el Oriente Antioqueño, Colombia. Construido con Next.js 16 (App Router), React 19, TypeScript y Tailwind CSS 4.
 
-First, run the development server:
+## Stack
+
+- **Next.js 16** — App Router, optimización de imágenes, caché de assets
+- **React 19** + **TypeScript 5** (modo estricto)
+- **Tailwind CSS 4** + PostCSS
+- **Google Analytics 4** + **Meta Pixel**
+- Fuentes locales: EB Garamond, Cormorant Garamond, Montserrat
+
+## Desarrollo local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en el navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Variables de entorno
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Crea un archivo `.env.local` con:
 
-## Learn More
+```env
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+NEXT_PUBLIC_META_PIXEL_ID=XXXXXXXXXXXXXXX
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Despliegue
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+El repositorio está conectado a **Vercel**. Cada push a `main` desencadena un despliegue automático.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build   # Verifica que el build pase antes de hacer push
+npm run lint    # Revisa errores de ESLint
+```
 
-## Deploy on Vercel
+## Estructura
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+app/            # Páginas (App Router)
+components/     # Componentes por sección
+lib/            # i18n (ES/EN) y contexto de idioma
+public/         # Imágenes, fuentes y logos
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Todo el texto visible al usuario vive en `lib/i18n.ts` — nunca se hardcodea en los componentes.

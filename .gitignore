@@ -1,5 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 /.pnp
@@ -10,32 +8,52 @@
 !.yarn/releases
 !.yarn/versions
 
+# next.js build output
+/.next/
+/out/
+/build
+
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
+# env files — define estas en Vercel Dashboard, no en el repo
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
 
-# production
-/build
+# vercel cli
+.vercel
 
-# misc
-.DS_Store
-*.pem
+# typescript incremental build info
+*.tsbuildinfo
+next-env.d.ts
 
-# debug
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
 
-# vercel
-.vercel
+# Nextcloud / sync clients
+.sync-exclude.lst
+*_conflict-*
+.~lock.*
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# claude code
+.claude/
+
+# editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# certificates
+*.pem
