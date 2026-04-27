@@ -35,7 +35,7 @@ export default function Hero() {
           alt="Silvarena Glamping"
           width={1357}
           height={1219}
-          className="mb-6 opacity-95 animate-fadeIn w-[448px] max-w-[90vw]"
+          className="mb-12 opacity-95 animate-fadeIn w-[448px] max-w-[90vw]"
           priority
         />
 
