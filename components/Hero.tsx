@@ -52,16 +52,6 @@ export default function Hero() {
           >
             {tr.hero.cta}
           </a>
-          <p className="font-montserrat text-[#F3EEE3]/40 text-[10px] uppercase tracking-[0.2em]">
-            {tr.hero.ctaSub}
-          </p>
-          {/* Rating */}
-          <div className="flex items-center gap-2 mt-1">
-            <span className="text-[#8FA67A] text-base">★★★★★</span>
-            <span className="font-montserrat text-[#F3EEE3]/70 text-xs tracking-[0.1em]">
-              4.9 · 127 {tr.hero.rating}
-            </span>
-          </div>
         </div>
 
         {/* Feature icons */}
