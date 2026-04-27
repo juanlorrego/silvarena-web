@@ -72,7 +72,7 @@ export default function Nav() {
             href={ctaHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-montserrat text-[#1F382E] bg-[#F3EEE3] hover:bg-[#8FA67A] hover:text-[#1F382E] text-xs uppercase tracking-[0.2em] px-5 py-2.5 transition-colors duration-300"
+            className="font-montserrat text-white bg-[#8FA67A] hover:bg-[#4A5E3A] text-xs uppercase tracking-[0.2em] px-5 py-2.5 transition-colors duration-300"
           >
             {tr.nav.reservar}
           </a>
@@ -117,7 +117,7 @@ export default function Nav() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMenuOpen(false)}
-                className="inline-block font-montserrat text-[#1F382E] bg-[#F3EEE3] text-xs uppercase tracking-[0.2em] px-5 py-2.5"
+                className="inline-block font-montserrat text-white bg-[#8FA67A] hover:bg-[#4A5E3A] text-xs uppercase tracking-[0.2em] px-5 py-2.5 transition-colors duration-300"
               >
                 {tr.nav.reservar}
               </a>
