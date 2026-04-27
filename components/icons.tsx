@@ -1,3 +1,45 @@
+export function NatureIcon({ size = 28 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M14 24 C14 24 6 18 6 11 C6 7 9.5 4 14 4 C18.5 4 22 7 22 11 C22 18 14 24 14 24Z" />
+      <line x1="14" y1="24" x2="14" y2="14" />
+      <path d="M14 17 C12 15 9 15 8 13" />
+      <path d="M14 14 C16 12 19 12 20 10" />
+    </svg>
+  )
+}
+
+export function MountainIcon({ size = 28 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <polyline points="2,22 10,8 14,14 18,10 26,22" />
+      <line x1="2" y1="22" x2="26" y2="22" />
+      <polyline points="16,10 18,8 20,10" />
+    </svg>
+  )
+}
+
+export function BedIcon({ size = 28 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M4 20 L4 12 L24 12 L24 20" />
+      <line x1="2" y1="20" x2="26" y2="20" />
+      <path d="M4 12 L4 8 Q4 7 5 7 L23 7 Q24 7 24 8 L24 12" />
+      <rect x="7" y="9" width="5" height="3" rx="1" />
+      <rect x="16" y="9" width="5" height="3" rx="1" />
+    </svg>
+  )
+}
+
+export function FireIcon({ size = 28 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M14 4 C14 4 18 9 18 13 C18 13 16 11 14 12 C14 12 18 15 17 19 C17 19 15 22 14 22 C13 22 11 19 11 19 C10 15 14 12 14 12 C12 11 10 13 10 13 C10 9 14 4 14 4Z" />
+      <ellipse cx="14" cy="22" rx="5" ry="1.5" />
+    </svg>
+  )
+}
+
 export function WhatsAppIcon({ size = 14 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
