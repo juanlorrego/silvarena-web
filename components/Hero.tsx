@@ -33,9 +33,9 @@ export default function Hero() {
         <Image
           src="/logos/satcked.png"
           alt="Silvarena Glamping"
-          width={340}
-          height={200}
-          className="mb-8 opacity-95 animate-fadeIn"
+          width={600}
+          height={360}
+          className="mb-4 opacity-95 animate-fadeIn w-[520px] max-w-[90vw]"
           priority
         />
 
