@@ -43,7 +43,7 @@ export default function Nav() {
             alt="Silvarena Glamping"
             width={640}
             height={128}
-            className="h-20 w-auto"
+            className="h-24 -my-2 w-auto"
             priority
           />
         </Link>
