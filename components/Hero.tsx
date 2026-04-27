@@ -39,14 +39,6 @@ export default function Hero() {
           priority
         />
 
-        {/* Tagline */}
-        <p
-          className="font-cormorant italic text-[#8FA67A] text-2xl md:text-3xl mb-10 animate-fadeIn"
-          style={{ animationDelay: '0.3s' }}
-        >
-          {tr.hero.tagline}
-        </p>
-
         {/* Rating */}
         <div
           className="flex items-center gap-2 mb-10 animate-fadeIn"
