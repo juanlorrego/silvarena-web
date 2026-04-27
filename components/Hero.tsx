@@ -12,7 +12,7 @@ export default function Hero() {
   const tr = t(lang)
 
   return (
-    <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden w-full">
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
@@ -56,15 +56,15 @@ export default function Hero() {
 
         {/* Feature icons */}
         <div
-          className="flex items-start justify-center gap-8 mt-10 animate-fadeIn"
+          className="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-6 mt-10 w-full max-w-[260px] sm:max-w-lg mx-auto animate-fadeIn"
           style={{ animationDelay: '0.7s' }}
         >
           {tr.hero.features.map((f, i) => {
             const Icon = featureIcons[i]
             return (
-              <div key={i} className="flex flex-col items-center gap-2 w-20 text-[#F3EEE3]/70">
-                <Icon size={28} />
-                <span className="font-montserrat text-[#F3EEE3]/70 text-[9px] uppercase tracking-[0.15em] text-center whitespace-pre-line">
+              <div key={i} className="flex flex-col items-center gap-2 text-[#F3EEE3]/70">
+                <Icon size={24} />
+                <span className="font-montserrat text-[#F3EEE3]/70 text-[8px] uppercase tracking-[0.1em] text-center whitespace-pre-line leading-tight">
                   {f.label}
                 </span>
               </div>
