@@ -3,17 +3,20 @@
 import Image from 'next/image'
 import { useLang } from '@/lib/LangContext'
 import { t, whatsappUrl } from '@/lib/i18n'
+import { NatureIcon, MountainIcon, BedIcon, FireIcon } from '@/components/icons'
+
+const featureIcons = [NatureIcon, MountainIcon, BedIcon, FireIcon]
 
 export default function Hero() {
   const { lang } = useLang()
   const tr = t(lang)
 
   return (
-    <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden w-full">
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-01.jpg"
+          src="/images/hero_background.png"
           alt="Silvarena Glamping — jacuzzi con vista al valle"
           fill
           priority
@@ -26,76 +29,68 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-3xl mx-auto">
-        {/* Supertitle */}
-        <p className="font-montserrat text-[#F3EEE3]/60 text-[10px] uppercase tracking-[0.35em] mb-8 animate-fadeIn">
-          {tr.hero.supertitle}
-        </p>
-
-        {/* Logo mark — large icon */}
+        {/* Stacked logo */}
         <Image
-          src="/logos/icon.svg"
-          alt="Silvarena"
-          width={64}
-          height={80}
-          className="mb-8 opacity-90 animate-fadeIn"
-          style={{ animationDelay: '0.2s' }}
+          src="/logos/satcked.png"
+          alt="Silvarena Glamping"
+          width={1357}
+          height={1219}
+          className="mb-12 opacity-95 animate-fadeIn w-[448px] max-w-[90vw]"
+          priority
         />
-
-        {/* Wordmark */}
-        <h1
-          className="font-garamond text-[#F3EEE3] text-5xl md:text-6xl lg:text-7xl uppercase tracking-[0.3em] mb-4 animate-fadeIn"
-          style={{ animationDelay: '0.3s' }}
-        >
-          SILVARENA
-        </h1>
-
-        {/* Hairline */}
-        <div
-          className="w-24 h-px bg-[#F3EEE3]/30 mb-4 animate-fadeIn"
-          style={{ animationDelay: '0.4s' }}
-        />
-
-        {/* Tagline */}
-        <p
-          className="font-cormorant italic text-[#8FA67A] text-2xl md:text-3xl mb-10 animate-fadeIn"
-          style={{ animationDelay: '0.5s' }}
-        >
-          {tr.hero.tagline}
-        </p>
-
-        {/* Rating */}
-        <div
-          className="flex items-center gap-2 mb-10 animate-fadeIn"
-          style={{ animationDelay: '0.6s' }}
-        >
-          <span className="text-[#8FA67A] text-base">★★★★★</span>
-          <span className="font-montserrat text-[#F3EEE3]/70 text-xs tracking-[0.1em]">
-            4.9 · 127 {tr.hero.rating}
-          </span>
-        </div>
 
         {/* CTA */}
         <div
           className="flex flex-col items-center gap-3 animate-fadeIn"
-          style={{ animationDelay: '0.7s' }}
+          style={{ animationDelay: '0.4s' }}
         >
           <a
             href={whatsappUrl(tr.messages.checkAvailability)}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-montserrat text-[#1F382E] bg-[#F3EEE3] hover:bg-[#8FA67A] text-xs uppercase tracking-[0.25em] px-10 py-4 transition-colors duration-400"
+            className="font-montserrat text-white bg-[#8FA67A] hover:bg-[#4A5E3A] text-xs uppercase tracking-[0.25em] px-10 py-4 transition-colors duration-400"
           >
             {tr.hero.cta}
           </a>
-          <p className="font-montserrat text-[#F3EEE3]/40 text-[10px] uppercase tracking-[0.2em]">
-            {tr.hero.ctaSub}
-          </p>
+        </div>
+
+        {/* Feature icons */}
+        <div
+          className="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-6 mt-10 w-full max-w-[260px] sm:max-w-lg mx-auto animate-fadeIn"
+          style={{ animationDelay: '0.7s' }}
+        >
+          {tr.hero.features.map((f, i) => {
+            const Icon = featureIcons[i]
+            return (
+              <div key={i} className="flex flex-col items-center gap-2 text-[#F3EEE3]/70">
+                <Icon size={24} />
+                <span className="font-montserrat text-[#F3EEE3]/70 text-[8px] uppercase tracking-[0.1em] text-center whitespace-pre-line leading-tight">
+                  {f.label}
+                </span>
+              </div>
+            )
+          })}
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-40">
-        <div className="w-px h-8 bg-[#F3EEE3]" />
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+        <span className="font-montserrat text-[#F3EEE3] text-[9px] uppercase tracking-[0.3em]">
+          {tr.hero.discoverMore}
+        </span>
+        <svg
+          className="animate-bounce"
+          width="16"
+          height="10"
+          viewBox="0 0 16 10"
+          fill="none"
+          stroke="#F3EEE3"
+          strokeWidth="1"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <polyline points="1,1 8,9 15,1" />
+        </svg>
       </div>
     </section>
   )

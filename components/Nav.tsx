@@ -36,14 +36,14 @@ export default function Nav() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-0 flex items-center justify-between">
         <Link href="/" className="flex-shrink-0">
           <Image
             src="/logos/logo-blanco.png"
             alt="Silvarena Glamping"
-            width={200}
-            height={48}
-            className="h-10 w-auto"
+            width={640}
+            height={128}
+            className="h-8 md:h-28 md:-my-4 w-auto max-w-[140px] md:max-w-none"
             priority
           />
         </Link>
@@ -72,7 +72,7 @@ export default function Nav() {
             href={ctaHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-montserrat text-[#1F382E] bg-[#F3EEE3] hover:bg-[#8FA67A] hover:text-[#1F382E] text-xs uppercase tracking-[0.2em] px-5 py-2.5 transition-colors duration-300"
+            className="font-montserrat text-white bg-[#8FA67A] hover:bg-[#4A5E3A] text-xs uppercase tracking-[0.2em] px-5 py-2.5 transition-colors duration-300"
           >
             {tr.nav.reservar}
           </a>
@@ -81,14 +81,16 @@ export default function Nav() {
         <div className="flex md:hidden items-center gap-4">
           <button
             onClick={toggleLang}
-            className="font-montserrat text-[#F3EEE3]/60 text-xs uppercase tracking-[0.2em]"
+            onTouchEnd={(e) => { e.preventDefault(); toggleLang() }}
+            className="font-montserrat text-[#F3EEE3]/60 text-xs uppercase tracking-[0.2em] cursor-pointer touch-manipulation"
           >
             {lang === 'es' ? 'EN' : 'ES'}
           </button>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
+            onTouchEnd={(e) => { e.preventDefault(); setMenuOpen(v => !v) }}
             aria-label="Menú"
-            className="text-[#F3EEE3] flex flex-col gap-1.5 p-1"
+            className="text-[#F3EEE3] flex flex-col gap-1.5 p-2 cursor-pointer touch-manipulation"
           >
             <span className={`block w-6 h-px bg-current transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
             <span className={`block w-6 h-px bg-current transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
@@ -117,7 +119,7 @@ export default function Nav() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMenuOpen(false)}
-                className="inline-block font-montserrat text-[#1F382E] bg-[#F3EEE3] text-xs uppercase tracking-[0.2em] px-5 py-2.5"
+                className="inline-block font-montserrat text-white bg-[#8FA67A] hover:bg-[#4A5E3A] text-xs uppercase tracking-[0.2em] px-5 py-2.5 transition-colors duration-300"
               >
                 {tr.nav.reservar}
               </a>
