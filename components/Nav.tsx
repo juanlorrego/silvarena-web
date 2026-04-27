@@ -81,14 +81,16 @@ export default function Nav() {
         <div className="flex md:hidden items-center gap-4">
           <button
             onClick={toggleLang}
-            className="font-montserrat text-[#F3EEE3]/60 text-xs uppercase tracking-[0.2em]"
+            onTouchEnd={(e) => { e.preventDefault(); toggleLang() }}
+            className="font-montserrat text-[#F3EEE3]/60 text-xs uppercase tracking-[0.2em] cursor-pointer touch-manipulation"
           >
             {lang === 'es' ? 'EN' : 'ES'}
           </button>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
+            onTouchEnd={(e) => { e.preventDefault(); setMenuOpen(v => !v) }}
             aria-label="Menú"
-            className="text-[#F3EEE3] flex flex-col gap-1.5 p-1"
+            className="text-[#F3EEE3] flex flex-col gap-1.5 p-2 cursor-pointer touch-manipulation"
           >
             <span className={`block w-6 h-px bg-current transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
             <span className={`block w-6 h-px bg-current transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
