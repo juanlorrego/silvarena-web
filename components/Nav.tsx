@@ -36,14 +36,14 @@ export default function Nav() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-8 py-0 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-0 flex items-center justify-between">
         <Link href="/" className="flex-shrink-0">
           <Image
             src="/logos/logo-blanco.png"
             alt="Silvarena Glamping"
             width={640}
             height={128}
-            className="h-14 md:h-28 md:-my-4 w-auto"
+            className="h-8 md:h-28 md:-my-4 w-auto max-w-[140px] md:max-w-none"
             priority
           />
         </Link>
