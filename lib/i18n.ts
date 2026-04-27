@@ -193,7 +193,7 @@ export const translations = {
       ctaSub:      'Best price when booking direct',
       discoverMore: 'Discover more',
       features: [
-        { label: 'Nature\nthat inspires' },
+        { label: 'Nature that\ninspires' },
         { label: 'Unforgettable\nviews' },
         { label: 'Unmatched\ncomfort' },
         { label: 'Unique\nexperiences' },

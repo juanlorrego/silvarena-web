@@ -34,8 +34,12 @@ export function BedIcon({ size = 28 }: { size?: number }) {
 export function FireIcon({ size = 28 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-      <path d="M14 4 C14 4 18 9 18 13 C18 13 16 11 14 12 C14 12 18 15 17 19 C17 19 15 22 14 22 C13 22 11 19 11 19 C10 15 14 12 14 12 C12 11 10 13 10 13 C10 9 14 4 14 4Z" />
-      <ellipse cx="14" cy="22" rx="5" ry="1.5" />
+      {/* Flames: tall center, shorter sides */}
+      <path d="M7 21 Q8 17 10 14 Q11 17 12 20 Q13 12 14 5 Q15 12 16 20 Q17 17 18 14 Q20 17 21 21 Z" />
+      {/* Left log */}
+      <line x1="3" y1="26" x2="19" y2="21" />
+      {/* Right log */}
+      <line x1="25" y1="26" x2="9" y2="21" />
     </svg>
   )
 }
