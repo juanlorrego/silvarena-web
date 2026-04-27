@@ -41,9 +41,9 @@ export default function Nav() {
           <Image
             src="/logos/logo-blanco.png"
             alt="Silvarena Glamping"
-            width={200}
-            height={48}
-            className="h-24 w-auto"
+            width={640}
+            height={128}
+            className="h-32 w-auto"
             priority
           />
         </Link>
