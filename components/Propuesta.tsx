@@ -79,7 +79,7 @@ export default function Propuesta() {
                 <h3 className="font-garamond text-[#F3EEE3] text-lg tracking-wide">
                   {title}
                 </h3>
-                <p className="font-montserrat text-[#F3EEE3]/45 text-xs uppercase tracking-[0.15em]">
+                <p className="font-montserrat text-[#F3EEE3]/45 text-xs uppercase tracking-[0.15em] whitespace-pre-line">
                   {sub}
                 </p>
               </div>
