@@ -36,19 +36,19 @@ export default function Nav() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-0 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 py-4 flex items-center">
         <Link href="/" className="flex-shrink-0">
           <Image
             src="/logos/logo-blanco.png"
             alt="Silvarena Glamping"
             width={640}
             height={128}
-            className="h-8 md:h-28 md:-my-4 w-auto max-w-[140px] md:max-w-none"
+            className="h-8 md:h-14 w-auto max-w-[140px] md:max-w-none"
             priority
           />
         </Link>
 
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-8 flex-1 justify-center">
           {navLinks.map((l) => (
             <li key={l.href}>
               <a
@@ -61,7 +61,7 @@ export default function Nav() {
           ))}
         </ul>
 
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-5 flex-shrink-0">
           <button
             onClick={toggleLang}
             className="font-montserrat text-[#F3EEE3]/60 text-xs uppercase tracking-[0.2em] hover:text-[#F3EEE3] transition-colors duration-300"
@@ -72,13 +72,13 @@ export default function Nav() {
             href={ctaHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-montserrat text-white bg-[#8FA67A] hover:bg-[#4A5E3A] text-xs uppercase tracking-[0.2em] px-5 py-2.5 transition-colors duration-300"
+            className="font-montserrat text-white bg-[#8FA67A] hover:bg-[#4A5E3A] text-xs uppercase tracking-[0.15em] px-5 py-2.5 whitespace-nowrap transition-colors duration-300"
           >
             {tr.nav.reservar}
           </a>
         </div>
 
-        <div className="flex md:hidden items-center gap-4">
+        <div className="flex md:hidden items-center gap-4 ml-auto">
           <button
             onClick={toggleLang}
             onTouchEnd={(e) => { e.preventDefault(); toggleLang() }}
