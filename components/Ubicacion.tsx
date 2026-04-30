@@ -16,7 +16,7 @@ export default function Ubicacion() {
         <RevealOnScroll>
           <div className="text-center mb-16">
             <p className="font-montserrat text-[#8FA67A] text-[10px] uppercase tracking-[0.3em] mb-4">
-              {tr.ubicacion.title}
+              {tr.ubicacion.label}
             </p>
             <h2 className="font-garamond text-[#F3EEE3] text-3xl md:text-4xl lg:text-5xl mb-6">
               {tr.ubicacion.title}
@@ -27,13 +27,13 @@ export default function Ubicacion() {
           </div>
         </RevealOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-stretch">
 
           {/* Map embed */}
-          <RevealOnScroll delay={100}>
-            <div className="w-full aspect-[4/3] overflow-hidden">
+          <RevealOnScroll delay={100} className="h-full">
+            <div className="w-full h-full min-h-[400px] overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.0!2d-75.4200!3d6.0100!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSilvarena+Glamping!5e0!3m2!1ses!2sco!4v1234567890"
+                src="https://maps.google.com/maps?q=5.963901952411886,-75.48546948926987&z=15&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0, filter: 'grayscale(60%) contrast(1.1) brightness(0.85)' }}
@@ -84,14 +84,24 @@ export default function Ubicacion() {
                 <p className="font-cormorant italic text-[#8FA67A] text-lg">
                   {tr.ubicacion.gps}
                 </p>
-                <a
-                  href="https://maps.google.com/?q=Silvarena+Glamping+La+Ceja"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block font-montserrat text-[#F3EEE3]/40 text-[10px] uppercase tracking-[0.2em] mt-3 hover:text-[#8FA67A] transition-colors duration-300"
-                >
-                  {tr.ui.openMaps}
-                </a>
+                <div className="flex gap-6 mt-3">
+                  <a
+                    href="https://maps.google.com/?q=5.963901952411886,-75.48546948926987"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-montserrat text-[#F3EEE3]/40 text-[10px] uppercase tracking-[0.2em] hover:text-[#8FA67A] transition-colors duration-300"
+                  >
+                    {tr.ui.openMaps}
+                  </a>
+                  <a
+                    href="https://waze.com/ul?ll=5.963901952411886,-75.48546948926987&navigate=yes"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-montserrat text-[#F3EEE3]/40 text-[10px] uppercase tracking-[0.2em] hover:text-[#8FA67A] transition-colors duration-300"
+                  >
+                    {tr.ui.openWaze}
+                  </a>
+                </div>
               </div>
             </div>
           </RevealOnScroll>
