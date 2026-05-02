@@ -7,13 +7,10 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
-// En producción, estos documentos se cargarían dinámicamente
-// desde una carpeta asignada (ej: /public/documentos/ o un bucket)
 const documentos = [
-  { nombre: 'RUT — Registro Único Tributario', disponible: false },
-  { nombre: 'Cámara de Comercio', disponible: false },
-  { nombre: 'Registro Nacional de Turismo (RNT)', disponible: false },
-  { nombre: 'Póliza de Responsabilidad Civil', disponible: false },
+  { nombre: 'RUT — Registro Único Tributario', archivo: '/documentos/RUT.pdf', disponible: true },
+  { nombre: 'Cámara de Comercio', archivo: '/documentos/CamaraComercio.pdf', disponible: true },
+  { nombre: 'Registro Nacional de Turismo (RNT)', archivo: '/documentos/RNT.pdf', disponible: true },
 ]
 
 export default function Documentos() {
@@ -41,7 +38,7 @@ export default function Documentos() {
                 </span>
                 {doc.disponible ? (
                   <a
-                    href={`/documentos/${doc.nombre}.pdf`}
+                    href={doc.archivo}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-montserrat text-[#8FA67A] hover:text-[#F3EEE3] text-[10px] uppercase tracking-[0.2em] transition-colors duration-300 flex-shrink-0"
