@@ -226,7 +226,7 @@ const COUNTRY_CODES: { code: string; es: string; en: string }[] = [
 function ContactoContent() {
   const { lang } = useLang()
   const tr = t(lang)
-  const [indicativo, setIndicativo] = useState('+57')
+  const [selectedCountryEs, setSelectedCountryEs] = useState('Colombia (+57)')
   const [contactoError, setContactoError] = useState(false)
   const [colombia, ...rest] = COUNTRY_CODES
   const sortedCodes = [
@@ -238,9 +238,6 @@ function ContactoContent() {
     <main className="bg-[#1F382E] min-h-screen pt-24 pb-16 px-6">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <p className="font-montserrat text-[#8FA67A] text-[10px] uppercase tracking-[0.3em] mb-4">
-            {tr.nav.contacto}
-          </p>
           <h1 className="font-garamond text-[#F3EEE3] text-4xl md:text-5xl mb-4">
             {tr.contacto.title}
           </h1>
@@ -317,7 +314,8 @@ function ContactoContent() {
                   return
                 }
                 setContactoError(false)
-                const celularCompleto = celular ? `${indicativo} ${celular}` : ''
+                const dialCode = COUNTRY_CODES.find(c => c.es === selectedCountryEs)?.code ?? '+57'
+                const celularCompleto = celular ? `${dialCode} ${celular}` : ''
                 const texto = [nombre, celularCompleto, email, msg].filter(Boolean).join(' — ')
                 window.open(whatsappUrl(texto), '_blank')
               }}
@@ -340,12 +338,12 @@ function ContactoContent() {
                   </label>
                   <div className="flex gap-2">
                     <select
-                      value={indicativo}
-                      onChange={(e) => setIndicativo(e.target.value)}
+                      value={selectedCountryEs}
+                      onChange={(e) => setSelectedCountryEs(e.target.value)}
                       className="w-40 shrink-0 bg-[#1F382E] border border-[#F3EEE3]/15 focus:border-[#8FA67A] outline-none px-3 py-3 font-montserrat text-[#F3EEE3] text-sm transition-colors duration-300 cursor-pointer"
                     >
-                      {sortedCodes.map(({ code, es, en }) => (
-                        <option key={es} value={code} className="bg-[#1F382E]">
+                      {sortedCodes.map(({ es, en }) => (
+                        <option key={es} value={es} className="bg-[#1F382E]">
                           {lang === 'en' ? en : es}
                         </option>
                       ))}
